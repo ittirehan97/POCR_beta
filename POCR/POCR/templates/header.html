@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name="description" content="POCR lets you extract texts from images and pdfs and converts them to .docx format.">
+
+
+    <title>POCR</title>
+
+
+    <link href="{{url_for('static', filename='css/bootstrap.min.css' )}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='icons/pocrlogo.ico')}}" rel="shortcut icon">
+
+    <style>
+footer {
+    position: fixed;
+
+}
+</style>
+</head>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between" style="background-color: #00695C;" >
+        <a class="navbar-brand" href="/">
+            <img src="{{url_for('static', filename='images/pocrlogo.png')}}" style = "max-width:100px; margin-top: -7px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="nav navbar-right">
+              <li class="nav-item" style="display: inline-block">
+                <a class="nav-link active" href="/"><font color="white">Home</font></a>
+              </li>
+              <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="/extract"><font color="white">Extract</font></a>
+              </li>
+              <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="/contact"><font color="white">Contact</font></a>
+              </li>
+            </ul>
+
+        </div>
+    </nav>
+
+</header>
+
+
+<body background="{{url_for('static', filename='images/bg1.jpg')}}">
+
+    {% block body %} {% endblock %}
+
+
+</body>
+
+
+
+</html>
